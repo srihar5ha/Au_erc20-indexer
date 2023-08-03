@@ -23,7 +23,7 @@ function App() {
 
   async function getTokenBalance() {
     const config = {
-      apiKey: 'Nj-9WxnB9pOO4I-m2v8BFtmIaPQVPz1W',
+      apiKey: import.meta.VITE_ALCHEMY_ID,
       network: Network.ETH_SEPOLIA,
     };
 
