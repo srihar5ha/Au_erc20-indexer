@@ -12,6 +12,9 @@ import {
 import { Alchemy, Network, Utils } from 'alchemy-sdk';
 import { useState } from 'react';
 
+
+import { ConnectButton } from '@rainbow-me/rainbowkit';
+
 function App() {
   const [userAddress, setUserAddress] = useState('');
   const [results, setResults] = useState([]);
@@ -20,8 +23,8 @@ function App() {
 
   async function getTokenBalance() {
     const config = {
-      apiKey: '<-- COPY-PASTE YOUR ALCHEMY API KEY HERE -->',
-      network: Network.ETH_MAINNET,
+      apiKey: 'Nj-9WxnB9pOO4I-m2v8BFtmIaPQVPz1W',
+      network: Network.ETH_SEPOLIA,
     };
 
     const alchemy = new Alchemy(config);
@@ -56,6 +59,7 @@ function App() {
             Plug in an address and this website will return all of its ERC-20
             token balances!
           </Text>
+          <ConnectButton />;
         </Flex>
       </Center>
       <Flex
